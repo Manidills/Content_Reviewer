@@ -2,13 +2,12 @@
 
 Simple Content_Validator web app that use Mongodb as a backend DB.
 
-Frond_end - Bootstrap (Customized)
-Back_end - Flask 
-DB - MongoDB
+Frond_end - Bootstrap (Customized),
+Back_end - Flask,
+DB - MongoDB.
 
 
 Run-
-
 "python run.py"
 
 
