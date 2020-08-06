@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="col-md-2"></div>
+<div class="col-md-8 jumbotron">
+  <h2 align="center">Form</h2>
+  <br>
+<div class="col-md-2"></div>
+
+<div class="col-md-8 jumbotron">
+    <form method="POST">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Title</label>
+      <input name="Title" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Title">
+    </div>
+    <div class="form-group">
+      <label for="Dato">Content</label>
+      <input name="Content" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Content">
+    </div>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input name="Valid" type="checkbox" class="form-check-input" value="Valid">
+        Dato
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+</div>
+{% endblock %}
+  

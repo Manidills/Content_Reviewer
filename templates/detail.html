@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1 align="center">Hi, {{ user.nickname }}!</h1>
+    <div class="col-md-offset-2 col-md-8">
+        <h1>Title: {{dato.Title}}</h1>
+        <h2>Content: {{dato.Content}}</h2>
+        <h3>Valid: {{dato.Valid}}</h3>
+    </div>
+{% endblock %}

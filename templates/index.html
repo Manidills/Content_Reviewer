@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1 align="center">Hi, {{ user.nickname }}!</h1>
+    <div class="col-md-offset-2 col-md-8">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <div align="center" [class="alert alert-info" role="alert">{{message}}</div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                   <th>Title</th>
+                   <th>Content</th>
+                   <th>Valid</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in datos %}
+                    <tr>
+                        <td>{{i.Title}}</td>
+                        <td>{{i.Content}}</td>
+                        <td>{{i.Valid}}</td>
+                        <td><a href="/detail/{{i._id}}">Detail</a></td>
+                        <td><a href="/revalidate/{{i._id}}">Revalidate</a></td>
+                        <td><a onclick="confirm()" href="/eliminate/{{i._id}}" id="confirm">Eliminate</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>                        
+        </table>
+    </div>
+    <script>
+
+    </script>
+{% endblock %}
